@@ -280,10 +280,43 @@
                         </div>
                         <a
                             class="btn secondary"
-                            href="https://www.google.com/maps/search/?api=1&query=Family+Center+Karbala+Hay+Al-Hussein"
-                            target="_blank"
-                            >افتحي الموقع</a
+                            href="#"
+                            onclick="openWazeFirst(event)"
                         >
+                            افتحي الموقع
+                        </a>
+
+                        <script>
+                            function openWazeFirst(e) {
+                                e.preventDefault();
+
+                                const googleMapsUrl =
+                                    "https://www.google.com/maps/place/%D9%85%D8%B1%D9%83%D8%B2+%D9%81%D8%A7%D9%85%D9%84%D9%8A+%D9%84%D8%B7%D8%A8+%D8%A7%D9%84%D8%A3%D8%B3%D9%86%D8%A7%D9%86+%D9%88%D8%A7%D9%84%D8%AA%D8%AC%D9%85%D9%8A%D9%84%E2%80%AD/@32.5951957,44.0121379,1373m/data=!3m1!1e3!4m10!1m2!2m1!1z2YXYsdmD2LIg2YHYp9mF2YTZig!3m6!1s0x1559695dfea9ec91:0xf35121abf53fd2a8!8m2!3d32.5954669!4d44.0151885!15sChPZhdix2YPYsiDZgdin2YXZhNmKkgENZGVudGFsX2NsaW5pY-ABAA!16s%2Fg%2F11jj3_4cxz?entry=ttu&g_ep=EgoyMDI2MDYyMS4wIKXMDSoASAFQAw%3D%3D";
+                                const wazeUrl =
+                                    "https://waze.com/ul?q=32.5954669,44.0151885&navigate=yes";
+
+                                const isAndroid = /android/i.test(
+                                    navigator.userAgent,
+                                );
+
+                                if (isAndroid) {
+                                    // Try Waze with Android intent
+                                    const wazeIntent = `intent://waze.com/ul?q=32.5954669,44.0151885&navigate=yes#Intent;scheme=https;action=android.intent.action.VIEW;package=com.waze;end`;
+                                    window.location.href = wazeIntent;
+
+                                    // Fallback to Google Maps if Waze fails
+                                    setTimeout(() => {
+                                        window.open(googleMapsUrl, "_blank");
+                                    }, 1500);
+                                } else {
+                                    // For iOS and others - try Waze URL, fallback to Google Maps
+                                    window.open(wazeUrl, "_blank");
+                                    setTimeout(() => {
+                                        window.open(googleMapsUrl, "_blank");
+                                    }, 1500);
+                                }
+                            }
+                        </script>
                     </div>
                 </section>
 
@@ -307,7 +340,7 @@
                     </div>
                     <div class="copyright-wrapper">
                         <span class="copyright">
-                            بكل فخر، تم تطوير هذا الموقع بواسطة
+                            تم تطوير هذا الموقع بواسطة
                             <a
                                 href="https://www.instagram.com/so.sa_28"
                                 target="_blank"
