@@ -1011,6 +1011,170 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
   .offer-actions{grid-template-columns:1fr!important;padding:.05rem .75rem 1rem!important}
 }
 
+
+/* ═══════════════════════════════════════
+   RESULTS + SOCIAL SECTION
+═══════════════════════════════════════ */
+.results-social{
+  background:
+    radial-gradient(circle at 12% 12%, rgba(6,182,212,.12), transparent 30%),
+    radial-gradient(circle at 90% 10%, rgba(29,78,216,.10), transparent 34%),
+    linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);
+  padding:5.5rem 1.5rem;
+  position:relative;
+  overflow:hidden;
+}
+.results-social .mw{position:relative;z-index:1}
+.ba-wrap{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:1.4rem;
+  align-items:stretch;
+}
+.ba-card,.social-card{
+  background:rgba(255,255,255,.9);
+  border:1px solid var(--border);
+  border-radius:30px;
+  box-shadow:var(--shL);
+  overflow:hidden;
+}
+.ba-card{padding:1.1rem}
+.ba-img{
+  position:relative;
+  min-height:420px;
+  border-radius:24px;
+  overflow:hidden;
+  background:linear-gradient(135deg,#eef6ff,#ffffff);
+  border:1px dashed #b8c8df;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.ba-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.ba-placeholder{
+  padding:2rem;
+  text-align:center;
+  color:var(--muted);
+}
+.ba-placeholder strong{
+  display:block;
+  color:var(--navy);
+  font-size:1.2rem;
+  margin-bottom:.5rem;
+}
+.ba-labels{
+  position:absolute;
+  top:1rem;
+  left:1rem;
+  right:1rem;
+  display:flex;
+  justify-content:space-between;
+  gap:.75rem;
+  pointer-events:none;
+}
+.ba-labels span{
+  background:rgba(10,22,40,.78);
+  color:#fff;
+  padding:.42rem .9rem;
+  border-radius:999px;
+  font-size:.78rem;
+  font-weight:900;
+  backdrop-filter:blur(10px);
+}
+.ba-caption{
+  margin-top:.9rem;
+  color:var(--text2);
+  font-size:.86rem;
+  line-height:1.7;
+  background:var(--bg2);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:.9rem 1rem;
+}
+.social-card{
+  padding:1.4rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.social-title{
+  font-size:1.55rem;
+  font-weight:900;
+  color:var(--navy);
+  margin-bottom:.55rem;
+}
+.social-desc{
+  color:var(--muted);
+  line-height:1.8;
+  font-size:.9rem;
+  margin-bottom:1.2rem;
+}
+.social-links{
+  display:grid;
+  gap:.75rem;
+}
+.social-link{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  text-decoration:none;
+  background:linear-gradient(180deg,#ffffff,#f7fbff);
+  border:1px solid #dbe7f7;
+  border-radius:20px;
+  padding:1rem;
+  color:var(--navy);
+  transition:.25s;
+}
+.social-link:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shM);
+  border-color:rgba(6,182,212,.35);
+}
+.social-link .sl-main{
+  display:flex;
+  align-items:center;
+  gap:.8rem;
+}
+.social-link .sl-ico{
+  width:46px;height:46px;border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.25rem;font-weight:900;
+}
+.sl-inst .sl-ico{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+.sl-face .sl-ico{background:linear-gradient(135deg,#1877f2,#0ea5e9)}
+.sl-wa .sl-ico{background:linear-gradient(135deg,#25d366,#128c7e)}
+.sl-t{font-weight:900;font-size:.95rem}
+.sl-s{font-size:.73rem;color:var(--muted);margin-top:.1rem}
+.social-hint{
+  margin-top:1rem;
+  padding:.9rem 1rem;
+  border-radius:18px;
+  background:linear-gradient(135deg,rgba(6,182,212,.08),rgba(29,78,216,.05));
+  border:1px solid rgba(6,182,212,.18);
+  color:var(--text2);
+  font-size:.82rem;
+  line-height:1.7;
+}
+@media(max-width:860px){
+  .ba-wrap{grid-template-columns:1fr}
+  .ba-img{min-height:360px}
+}
+@media(max-width:560px){
+  .results-social{padding:3.8rem .9rem}
+  .ba-card,.social-card{border-radius:24px}
+  .ba-img{min-height:300px;border-radius:20px}
+  .ba-labels span{font-size:.7rem;padding:.35rem .72rem}
+  .social-title{font-size:1.3rem}
+  .social-link{padding:.85rem;border-radius:18px}
+  .social-link .sl-ico{width:40px;height:40px;border-radius:14px}
+}
+
 </style>
 </head>
 <body>
@@ -1202,70 +1366,315 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       <p class="sec-sub">اختاري القسم وشوفي الأسعار المتوفرة، وباقي الخدمات يتم تحديد سعرها حسب الحالة</p>
     </div>
     <div class="grid-prices">
-<div class="offer-filter rv"><a href="#offer-clarity">ليزر Clarity II</a><a href="#offer-deka">ليزر DEKA Motus</a><a href="#offer-hydra">الهايدروفيشل</a><a href="#offer-glow">النضارة ومحفزات الكولاجين</a><a href="#offer-peeling">التقشير</a><a href="#offer-hair">علاج تساقط الشعر</a><a href="#offer-botox">البوتوكس</a><a href="#offer-filler">الفلر</a><a href="#offer-eye">الهالات وتحت العين</a><a href="#offer-secret">السيكرت RF</a></div>
+<div class="offer-filter rv">
+  <a href="#offer-clarity">ليزر Clarity II</a>
+  <a href="#offer-deka">ليزر DEKA Motus</a>
+  <a href="#offer-hydra">الهايدروفيشل</a>
+  <a href="#offer-glow">النضارة والكولاجين</a>
+  <a href="#offer-peeling">التقشير</a>
+  <a href="#offer-hair">علاج تساقط الشعر</a>
+  <a href="#offer-botox">البوتوكس</a>
+  <a href="#offer-filler">الفلر</a>
+  <a href="#offer-eye">الهالات وتحت العين</a>
+  <a href="#offer-secret">السيكرت RF</a>
+</div>
 <div class="offer-group rv" id="offer-clarity">
-  <div class="offer-group-head"><div class="offer-title"><span class="emoji">💫</span><span>ليزر Clarity II</span></div><div class="offer-sub">✦ احجزي جلستك الان</div></div>
-  <div class="offer-items"><div class="offer-item"><div><div class="oi-name">فل بدي</div><div class="oi-desc">جميع مناطق الجسم</div></div><div class="oi-price">250,000 د.ع</div></div>
-  <div class="offer-items"><div class="offer-item"><div><div class="oi-name">ميني فل بدي</div><div class="oi-desc"></div></div><div class="oi-price">175,000 د.ع</div></div>
-   <div class="offer-item"><div><div class="oi-name">فل بدي عدا بطن+ظهر</div><div class="oi-desc">كامل الجسم ما عدا البطن والظهر</div></div><div class="oi-price">225,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">أرجل كاملة</div><div class="oi-desc">من الركبة حتى القدم</div></div><div class="oi-price">100,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">نصف أرجل</div><div class="oi-desc">نصف الساق</div></div><div class="oi-price">60,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">أيدي كاملة</div><div class="oi-desc">من الكتف حتى الأصابع</div></div><div class="oi-price">80,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">نصف أيدي</div><div class="oi-desc">من الكوع</div></div><div class="oi-price">50,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">بيكيني</div></div><div class="oi-price">40,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">أكزلا / إبط</div></div><div class="oi-price">35,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">وجه</div></div><div class="oi-price">35,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">خلفية</div></div><div class="oi-price">50,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">ذقن + شارب</div></div><div class="oi-price">25,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">تحديد لحية + رقبة</div></div><div class="oi-price">50,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">تحديد حاجب</div></div><div class="oi-price">15,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">بطن</div></div><div class="oi-price">65,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">ظهر</div></div><div class="oi-price">65,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">رقبة</div></div><div class="oi-price">25,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">وجنات</div></div><div class="oi-price">25,000 د.ع</div></div></div>
-
+  <div class="offer-group-head">
+    <div class="offer-title"><span class="emoji">💫</span><span>ليزر Clarity II</span></div>
+    <div class="offer-sub">✦ احجزي جلستك الآن</div>
+  </div>
+  <div class="offer-items">
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">فل بدي</div>
+        <div class="oi-desc">جميع مناطق الجسم</div>
+      </div>
+      <div class="oi-price">250,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">ميني فل بدي</div>
+        <div class="oi-desc">باقة مختصرة ومناسبة</div>
+      </div>
+      <div class="oi-price">175,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">فل بدي عدا بطن + ظهر</div>
+        <div class="oi-desc">كامل الجسم ما عدا البطن والظهر</div>
+      </div>
+      <div class="oi-price">225,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">أرجل كاملة</div>
+        <div class="oi-desc">كامل الأرجل</div>
+      </div>
+      <div class="oi-price">100,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">نصف أرجل</div>
+        <div class="oi-desc">نصف الساق</div>
+      </div>
+      <div class="oi-price">60,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">أيدي كاملة</div>
+        <div class="oi-desc">من الكتف حتى الأصابع</div>
+      </div>
+      <div class="oi-price">80,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">نصف أيدي</div>
+        <div class="oi-desc">من الكوع</div>
+      </div>
+      <div class="oi-price">50,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">بيكيني</div>
+        <div class="oi-desc">منطقة البكيني</div>
+      </div>
+      <div class="oi-price">40,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">أكزلا / إبط</div>
+        <div class="oi-desc">منطقة الإبط</div>
+      </div>
+      <div class="oi-price">35,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">وجه</div>
+        <div class="oi-desc">كامل الوجه</div>
+      </div>
+      <div class="oi-price">35,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">خلفية</div>
+        <div class="oi-desc">منطقة الخلفية</div>
+      </div>
+      <div class="oi-price">50,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">ذقن + شارب</div>
+        <div class="oi-desc">تحديد وتنظيف</div>
+      </div>
+      <div class="oi-price">25,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">تحديد لحية + رقبة</div>
+        <div class="oi-desc">للرجال</div>
+      </div>
+      <div class="oi-price">50,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">تحديد حاجب</div>
+        <div class="oi-desc">تحديد دقيق</div>
+      </div>
+      <div class="oi-price">15,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">بطن</div>
+        <div class="oi-desc">منطقة البطن</div>
+      </div>
+      <div class="oi-price">65,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">ظهر</div>
+        <div class="oi-desc">منطقة الظهر</div>
+      </div>
+      <div class="oi-price">65,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">رقبة</div>
+        <div class="oi-desc">منطقة الرقبة</div>
+      </div>
+      <div class="oi-price">25,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">وجنات</div>
+        <div class="oi-desc">تنظيف الوجنات</div>
+      </div>
+      <div class="oi-price">25,000 د.ع</div>
+    </div>
+  </div>
   <div class="offer-note">سؤال شائع عن الليزر: نعم، تكدرين تجمعين أكثر من منطقة بنفس الموعد، والحجز المشترك يوفر وقتك.</div>
-  <div class="offer-actions"><a href="https://wa.me/9647740317888?text=مرحبا مركز فاملي، أريد حجز/استفسار عن ليزر Clarity II" class="bs bs-p" target="_blank" rel="noopener">احجزي العرض 💬</a><a href="tel:07740317888" class="bs bs-g">اتصال 📞</a></div>
+  <div class="offer-actions">
+    <a href="https://wa.me/9647740317888?text=مرحبا مركز فاملي، أريد حجز/استفسار عن ليزر Clarity II" class="bs bs-p" target="_blank" rel="noopener">احجزي العرض 💬</a>
+    <a href="tel:07740317888" class="bs bs-g">اتصال 📞</a>
+  </div>
 </div>
 <div class="offer-group rv" id="offer-deka">
-  <div class="offer-group-head"><div class="offer-title"><span class="emoji">⚡</span><span>ليزر DEKA Motus</span></div><div class="offer-sub">✦ مناسب لجميع ألوان البشرة</div></div>
-  <div class="offer-items"><div class="offer-item"><div><div class="oi-name">فل بدي</div><div class="oi-desc">جميع مناطق الجسم</div></div><div class="oi-price ask">150,000 د.ع</div></div>
-       <div class="offer-items"><div class="offer-item"><div><div class="oi-name">ميني فل بدي</div><div class="oi-desc"></div></div><div class="oi-price ask">90,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">فل بدي عدا بطن+ظهر</div></div><div class="oi-price ask">120,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">أرجل كاملة</div><div class="oi-desc">من الركبة حتى القدم</div></div><div class="oi-price ask">60,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">نصف ارجل</div><div class="oi-desc"></div></div><div class="oi-price ask">40,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">أيدي كاملة</div><div class="oi-desc">من الكتف حتى الأصابع</div></div><div class="oi-price ask">50,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">نصف ايدي</div><div class="oi-desc">من الكتف حتى الأصابع</div></div><div class="oi-price ask">35,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">بيكيني</div></div><div class="oi-price ask">20,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">أكزلا / إبط</div></div><div class="oi-price ask">20,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">وجه</div></div><div class="oi-price ask">20,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">خلفية</div></div><div class="oi-price ask">30,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">ذقن+شارب</div></div><div class="oi-price ask">15,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">تحديد لحيه مع رقبه</div></div><div class="oi-price ask">20,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">ظهر</div></div><div class="oi-price ask">35,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">بطن</div></div><div class="oi-price ask">35,000 د.ع</div></div></div>
-  <div class="offer-note">كلاريتي II ممتاز للبشرة الفاتحة والمتوسطة، وديكا موتوز أكثر مرونة للبشرات الداكنة أيضاً.</div>
-  <div class="offer-actions"><a href="https://wa.me/9647740317888?text=مرحبا مركز فاملي، أريد حجز/استفسار عن ليزر DEKA Motus" class="bs bs-p" target="_blank" rel="noopener">احجزي العرض 💬</a><a href="tel:07740317888" class="bs bs-g">اتصال 📞</a></div>
+  <div class="offer-group-head">
+    <div class="offer-title"><span class="emoji">⚡</span><span>ليزر DEKA Motus</span></div>
+    <div class="offer-sub">✦ مناسب لجميع ألوان البشرة</div>
+  </div>
+  <div class="offer-items">
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">فل بدي</div>
+        <div class="oi-desc">جميع مناطق الجسم</div>
+      </div>
+      <div class="oi-price">150,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">ميني فل بدي</div>
+        <div class="oi-desc">باقة مختصرة ومناسبة</div>
+      </div>
+      <div class="oi-price">90,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">فل بدي عدا بطن + ظهر</div>
+        <div class="oi-desc">كامل الجسم ما عدا البطن والظهر</div>
+      </div>
+      <div class="oi-price">120,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">أرجل كاملة</div>
+        <div class="oi-desc">كامل الأرجل</div>
+      </div>
+      <div class="oi-price">60,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">نصف أرجل</div>
+        <div class="oi-desc">نصف الساق</div>
+      </div>
+      <div class="oi-price">40,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">أيدي كاملة</div>
+        <div class="oi-desc">من الكتف حتى الأصابع</div>
+      </div>
+      <div class="oi-price">50,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">نصف أيدي</div>
+        <div class="oi-desc">من الكوع</div>
+      </div>
+      <div class="oi-price">35,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">بيكيني</div>
+        <div class="oi-desc">منطقة البكيني</div>
+      </div>
+      <div class="oi-price">20,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">أكزلا / إبط</div>
+        <div class="oi-desc">منطقة الإبط</div>
+      </div>
+      <div class="oi-price">20,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">وجه</div>
+        <div class="oi-desc">كامل الوجه</div>
+      </div>
+      <div class="oi-price">20,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">خلفية</div>
+        <div class="oi-desc">منطقة الخلفية</div>
+      </div>
+      <div class="oi-price">30,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">ذقن + شارب</div>
+        <div class="oi-desc">تحديد وتنظيف</div>
+      </div>
+      <div class="oi-price">15,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">تحديد لحية + رقبة</div>
+        <div class="oi-desc">للرجال</div>
+      </div>
+      <div class="oi-price">20,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">ظهر</div>
+        <div class="oi-desc">منطقة الظهر</div>
+      </div>
+      <div class="oi-price">35,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">بطن</div>
+        <div class="oi-desc">منطقة البطن</div>
+      </div>
+      <div class="oi-price">35,000 د.ع</div>
+    </div>
+  </div>
+  <div class="offer-note">ديكا موتوس خيار مناسب ومريح لمختلف أنواع البشرة، ويتم تحديد الخطة حسب المنطقة ونوع الشعر.</div>
+  <div class="offer-actions">
+    <a href="https://wa.me/9647740317888?text=مرحبا مركز فاملي، أريد حجز/استفسار عن ليزر DEKA Motus" class="bs bs-p" target="_blank" rel="noopener">احجزي العرض 💬</a>
+    <a href="tel:07740317888" class="bs bs-g">اتصال 📞</a>
+  </div>
 </div>
 <div class="offer-group rv" id="offer-hydra">
-  <div class="offer-group-head"><div class="offer-title"><span class="emoji">💧</span><span>الهايدروفيشل</span></div><div class="offer-sub">✦ تنظيف عميق وترطيب فوري</div></div>
-  <div class="offer-items"><div class="offer-item"><div><div class="oi-name">هايدروفيشل عادي</div><div class="oi-desc">تنظيف عميق وترطيب للبشرة</div></div><div class="oi-price">30,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">هايدروكول</div><div class="oi-desc">ترطيب أعمق وانتعاش</div></div><div class="oi-price">45,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">VIP هايدروفيشل + إبرة نضارة</div><div class="oi-desc">باقة نضارة متكاملة</div></div><div class="oi-price">75,000 د.ع</div></div></div>
+  <div class="offer-group-head">
+    <div class="offer-title"><span class="emoji">💧</span><span>الهايدروفيشل</span></div>
+    <div class="offer-sub">✦ تنظيف عميق وترطيب فوري</div>
+  </div>
+  <div class="offer-items">
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">هايدروفيشل عادي</div>
+        <div class="oi-desc">تنظيف عميق وترطيب للبشرة</div>
+      </div>
+      <div class="oi-price">30,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">هايدروكول</div>
+        <div class="oi-desc">ترطيب أعمق وانتعاش</div>
+      </div>
+      <div class="oi-price">45,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">VIP هايدروفيشل + إبرة نضارة</div>
+        <div class="oi-desc">باقة نضارة متكاملة</div>
+      </div>
+      <div class="oi-price">75,000 د.ع</div>
+    </div>
+  </div>
   <div class="offer-note">النتيجة تظهر فوراً بعد الجلسة: بشرة أنعم وأكثر إشراقاً من نفس اليوم.</div>
-  <div class="offer-actions"><a href="https://wa.me/9647740317888?text=مرحبا مركز فاملي، أريد حجز/استفسار عن الهايدروفيشل" class="bs bs-p" target="_blank" rel="noopener">احجزي العرض 💬</a><a href="tel:07740317888" class="bs bs-g">اتصال 📞</a></div>
+  <div class="offer-actions">
+    <a href="https://wa.me/9647740317888?text=مرحبا مركز فاملي، أريد حجز/استفسار عن الهايدروفيشل" class="bs bs-p" target="_blank" rel="noopener">احجزي العرض 💬</a>
+    <a href="tel:07740317888" class="bs bs-g">اتصال 📞</a>
+  </div>
 </div>
 <div class="offer-group rv" id="offer-glow">
   <div class="offer-group-head">
-    <div class="offer-title">
-      <span class="emoji">✨</span>
-      <span>النضارة ومحفزات الكولاجين</span>
-    </div>
+    <div class="offer-title"><span class="emoji">✨</span><span>النضارة ومحفزات الكولاجين</span></div>
     <div class="offer-sub">✦ عروض النضارة المتوفرة</div>
   </div>
-
   <div class="offer-items">
-
     <div class="offer-item">
       <div>
         <div class="oi-name">إبرة سلمون</div>
@@ -1273,7 +1682,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">100,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">إبرة عمبر - زعفران</div>
@@ -1281,7 +1689,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">100,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">إبرة الرفيتال</div>
@@ -1289,7 +1696,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">100,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">ميلازما بريت للتصبغات</div>
@@ -1297,7 +1703,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">100,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">الإبرة الوردية</div>
@@ -1305,7 +1710,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">120,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">إبرة السايتوكير الفرنسية</div>
@@ -1313,7 +1717,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">180,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">إبرة الجوري</div>
@@ -1321,7 +1724,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">180,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">إبرة السكنجر</div>
@@ -1329,7 +1731,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">190,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">إبرة البوليسوم</div>
@@ -1337,7 +1738,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">190,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">إبرة الكاريزما</div>
@@ -1345,36 +1745,46 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">220,000 د.ع</div>
     </div>
-
   </div>
-
-  <div class="offer-note">
-    اختاري الإبرة المناسبة لبشرتك بعد استشارة مختصة داخل مركز فاملي.
-  </div>
-
+  <div class="offer-note">اختاري الإبرة المناسبة لبشرتك بعد استشارة مختصة داخل مركز فاملي.</div>
   <div class="offer-actions">
     <a href="https://wa.me/9647740317888?text=مرحبا مركز فاملي، أريد حجز/استفسار عن عروض النضارة ومحفزات الكولاجين" class="bs bs-p" target="_blank" rel="noopener">احجزي العرض 💬</a>
     <a href="tel:07740317888" class="bs bs-g">اتصال 📞</a>
   </div>
 </div>
 <div class="offer-group rv" id="offer-peeling">
-  <div class="offer-group-head"><div class="offer-title"><span class="emoji">☀️</span><span>التقشير</span></div><div class="offer-sub">✦ تجديد البشرة وتوحيد اللون</div></div>
-  <div class="offer-items"><div class="offer-item"><div><div class="oi-name">تقشير الحبوب</div><div class="oi-desc"></div></div><div class="oi-price ask">60,000 د.ع</div></div>
-<div class="offer-item"><div><div class="oi-name">تقشير التصبغات</div><div class="oi-desc"></div></div><div class="oi-price ask">60.000 د.ع</div></div>
-  <div class="offer-note">إحساس خفيف بالدفء فقط، ونستخدم كريم تخدير قبل الجلسة عند الحاجة.</div>
-  <div class="offer-actions"><a href="https://wa.me/9647740317888?text=مرحبا مركز فاملي، أريد حجز/استفسار عن التقشير" class="bs bs-p" target="_blank" rel="noopener">احجزي العرض 💬</a><a href="tel:07740317888" class="bs bs-g">اتصال 📞</a></div>
+  <div class="offer-group-head">
+    <div class="offer-title"><span class="emoji">☀️</span><span>التقشير</span></div>
+    <div class="offer-sub">✦ تجديد البشرة وتوحيد اللون</div>
+  </div>
+  <div class="offer-items">
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">تقشير الحبوب</div>
+        <div class="oi-desc">لتخفيف آثار الحبوب وتحسين ملمس البشرة</div>
+      </div>
+      <div class="oi-price">60,000 د.ع</div>
+    </div>
+    <div class="offer-item">
+      <div>
+        <div class="oi-name">تقشير التصبغات</div>
+        <div class="oi-desc">لتوحيد لون البشرة وتقليل التصبغات</div>
+      </div>
+      <div class="oi-price">60,000 د.ع</div>
+    </div>
+  </div>
+  <div class="offer-note">يتم اختيار نوع التقشير المناسب حسب حالة البشرة للحصول على نتيجة آمنة.</div>
+  <div class="offer-actions">
+    <a href="https://wa.me/9647740317888?text=مرحبا مركز فاملي، أريد حجز/استفسار عن التقشير" class="bs bs-p" target="_blank" rel="noopener">احجزي العرض 💬</a>
+    <a href="tel:07740317888" class="bs bs-g">اتصال 📞</a>
+  </div>
 </div>
 <div class="offer-group rv" id="offer-hair">
   <div class="offer-group-head">
-    <div class="offer-title">
-      <span class="emoji">🌿</span>
-      <span>علاج تساقط الشعر</span>
-    </div>
+    <div class="offer-title"><span class="emoji">🌿</span><span>علاج تساقط الشعر</span></div>
     <div class="offer-sub">✦ حلول فعّالة ومثبتة</div>
   </div>
-
   <div class="offer-items">
-
     <div class="offer-item">
       <div>
         <div class="oi-name">بلازما عادية</div>
@@ -1382,7 +1792,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">35,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">بلازما مفعلة</div>
@@ -1390,7 +1799,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">55,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">بلازما نانو ماتركس</div>
@@ -1398,7 +1806,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">75,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">بلازما مينوكسديل</div>
@@ -1406,21 +1813,15 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">150,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">بلازما بايوجنكس</div>
-        <div class="oi-desc">أحدث تقنية لتغذية وتجديد بصيلات الشعر</div>
+        <div class="oi-desc">تغذية وتجديد بصيلات الشعر</div>
       </div>
       <div class="oi-price">180,000 د.ع</div>
     </div>
-
   </div>
-
-  <div class="offer-note">
-    يتم اختيار نوع البلازما المناسب حسب حالة الشعر بعد تقييم المختصة داخل مركز فاملي.
-  </div>
-
+  <div class="offer-note">يتم اختيار نوع البلازما المناسب حسب حالة الشعر بعد تقييم المختصة داخل مركز فاملي.</div>
   <div class="offer-actions">
     <a href="https://wa.me/9647740317888?text=مرحبا مركز فاملي، أريد حجز/استفسار عن علاج تساقط الشعر" class="bs bs-p" target="_blank" rel="noopener">احجزي العرض 💬</a>
     <a href="tel:07740317888" class="bs bs-g">اتصال 📞</a>
@@ -1428,15 +1829,10 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
 </div>
 <div class="offer-group rv" id="offer-botox">
   <div class="offer-group-head">
-    <div class="offer-title">
-      <span class="emoji">💉</span>
-      <span>البوتوكس</span>
-    </div>
+    <div class="offer-title"><span class="emoji">💉</span><span>البوتوكس</span></div>
     <div class="offer-sub">✦ بأيدي طبية متخصصة</div>
   </div>
-
   <div class="offer-items">
-
     <div class="offer-item">
       <div>
         <div class="oi-name">عرض الشخصين (الصديقات)</div>
@@ -1444,7 +1840,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">150,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">بوتوكس غازي</div>
@@ -1452,7 +1847,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">120,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">بوتوكس باودر</div>
@@ -1460,13 +1854,8 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">100,000 د.ع</div>
     </div>
-
   </div>
-
-  <div class="offer-note">
-    جميع جلسات البوتوكس تُجرى بواسطة كوادر طبية مختصة للحصول على نتائج طبيعية وآمنة.
-  </div>
-
+  <div class="offer-note">جميع جلسات البوتوكس تُجرى بواسطة كوادر طبية مختصة للحصول على نتائج طبيعية وآمنة.</div>
   <div class="offer-actions">
     <a href="https://wa.me/9647740317888?text=مرحبا مركز فاملي، أريد حجز/استفسار عن عروض البوتوكس" class="bs bs-p" target="_blank" rel="noopener">احجزي العرض 💬</a>
     <a href="tel:07740317888" class="bs bs-g">اتصال 📞</a>
@@ -1474,15 +1863,10 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
 </div>
 <div class="offer-group rv" id="offer-filler">
   <div class="offer-group-head">
-    <div class="offer-title">
-      <span class="emoji">♡</span>
-      <span>الفلر</span>
-    </div>
+    <div class="offer-title"><span class="emoji">♡</span><span>الفلر</span></div>
     <div class="offer-sub">✦ نتيجة فورية وطبيعية</div>
   </div>
-
   <div class="offer-items">
-
     <div class="offer-item">
       <div>
         <div class="oi-name">الفلر الكوري</div>
@@ -1490,7 +1874,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">80,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">الفلر الكوري براند</div>
@@ -1498,7 +1881,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">90,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">الفلر الإيطالي</div>
@@ -1506,7 +1888,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">110,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">فلر الإكزوزوم</div>
@@ -1514,38 +1895,26 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">130,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">فلر سويسري (Teosyal)</div>
-        <div class="oi-desc">من أفضل أنواع الفلر بنتائج فاخرة وطويلة الأمد</div>
+        <div class="oi-desc">نتائج فاخرة وطويلة الأمد</div>
       </div>
       <div class="oi-price">180,000 د.ع</div>
     </div>
-
   </div>
-
-  <div class="offer-note">
-    يتم اختيار نوع الفلر المناسب حسب المنطقة المراد علاجها للحصول على نتيجة متناسقة وطبيعية.
-  </div>
-
+  <div class="offer-note">يتم اختيار نوع الفلر المناسب حسب المنطقة المراد علاجها للحصول على نتيجة متناسقة وطبيعية.</div>
   <div class="offer-actions">
     <a href="https://wa.me/9647740317888?text=مرحبا مركز فاملي، أريد حجز/استفسار عن عروض الفلر" class="bs bs-p" target="_blank" rel="noopener">احجزي العرض 💬</a>
     <a href="tel:07740317888" class="bs bs-g">اتصال 📞</a>
   </div>
 </div>
-
 <div class="offer-group rv" id="offer-eye">
   <div class="offer-group-head">
-    <div class="offer-title">
-      <span class="emoji">👁️</span>
-      <span>الهالات وتحت العين</span>
-    </div>
+    <div class="offer-title"><span class="emoji">👁️</span><span>الهالات وتحت العين</span></div>
     <div class="offer-sub">✦ علاج شامل للهالات وتحت العين</div>
   </div>
-
   <div class="offer-items">
-
     <div class="offer-item">
       <div>
         <div class="oi-name">ميزو هالات</div>
@@ -1553,7 +1922,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">35,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">ميزو هالات بلس</div>
@@ -1561,7 +1929,6 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">60,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">ميزو تنشيف الحبوب</div>
@@ -1569,21 +1936,15 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">60,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">إبرة السايتوكير الفرنسية</div>
-        <div class="oi-desc">تجديد البشرة وتحفيز الكولاجين وتحسين مظهر تحت العين</div>
+        <div class="oi-desc">تجديد البشرة وتحسين الخطوط الدقيقة</div>
       </div>
       <div class="oi-price">180,000 د.ع</div>
     </div>
-
   </div>
-
-  <div class="offer-note">
-    يتم اختيار العلاج المناسب بعد تقييم الحالة للحصول على أفضل النتائج.
-  </div>
-
+  <div class="offer-note">يتم اختيار العلاج المناسب بعد تقييم الحالة للحصول على أفضل النتائج.</div>
   <div class="offer-actions">
     <a href="https://wa.me/9647740317888?text=مرحبا مركز فاملي، أريد حجز/استفسار عن علاج الهالات وتحت العين" class="bs bs-p" target="_blank" rel="noopener">احجزي العرض 💬</a>
     <a href="tel:07740317888" class="bs bs-g">اتصال 📞</a>
@@ -1591,24 +1952,10 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
 </div>
 <div class="offer-group rv" id="offer-secret">
   <div class="offer-group-head">
-    <div class="offer-title">
-      <span class="emoji">🔬</span>
-      <span>السيكرت RF</span>
-    </div>
+    <div class="offer-title"><span class="emoji">🔬</span><span>السيكرت RF</span></div>
     <div class="offer-sub">✦ شد وتجديد بدون جراحة</div>
   </div>
-
-  <div class="offer-group rv" id="offer-secret">
-  <div class="offer-group-head">
-    <div class="offer-title">
-      <span class="emoji">🔬</span>
-      <span>السيكرت RF</span>
-    </div>
-    <div class="offer-sub">✦ شد وتجديد بدون جراحة</div>
-  </div>
-
   <div class="offer-items">
-
     <div class="offer-item">
       <div>
         <div class="oi-name">سيكرت RF</div>
@@ -1616,29 +1963,21 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
       </div>
       <div class="oi-price">75,000 د.ع</div>
     </div>
-
     <div class="offer-item">
       <div>
         <div class="oi-name">سيكرت RF + بلازما نانو ماتركس</div>
-        <div class="oi-desc">جلسة متكاملة لشد البشرة وتجديدها وتحفيز نمو الكولاجين</div>
+        <div class="oi-desc">جلسة متكاملة لشد البشرة وتجديدها</div>
       </div>
       <div class="oi-price">150,000 د.ع</div>
     </div>
-
   </div>
-
-  <div class="offer-note">
-    تقنية السيكرت RF تجمع بين الإبر الدقيقة والترددات الراديوية للحصول على شد طبيعي وتجديد تدريجي للبشرة.
-  </div>
-
+  <div class="offer-note">تقنية السيكرت RF تجمع بين الإبر الدقيقة والترددات الراديوية للحصول على شد طبيعي وتجديد تدريجي للبشرة.</div>
   <div class="offer-actions">
     <a href="https://wa.me/9647740317888?text=مرحبا مركز فاملي، أريد حجز/استفسار عن عروض السيكرت RF" class="bs bs-p" target="_blank" rel="noopener">احجزي العرض 💬</a>
     <a href="tel:07740317888" class="bs bs-g">اتصال 📞</a>
   </div>
 </div>
-
-</div>
-</div><!-- /grid-prices -->
+    </div>
   </div>
 </section>
 
@@ -1740,6 +2079,86 @@ footer{background:var(--navy);padding:3.8rem 1.5rem 2rem}
             <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             Google Maps
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     RESULTS + SOCIAL
+══════════════════════════════════ -->
+<section class="results-social" id="results-social">
+  <div class="mw">
+    <div class="sec-hd rv">
+      <div class="eyebrow">نتائجنا</div>
+      <h2 class="sec-h">قبل وبعد ليزر Clarity II</h2>
+      <p class="sec-sub">هنا تضيفين صورة النتيجة الخاصة بالمركز. بدّلي الصورة باسم <b>clarity-before-after.jpg</b> داخل نفس فولدر الموقع.</p>
+    </div>
+
+    <div class="ba-wrap">
+      <div class="ba-card rv d1">
+        <div class="ba-img">
+          <img src="clarity-before-after.jpg" alt="نتائج ليزر Clarity II قبل وبعد" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <div class="ba-placeholder" style="display:none">
+            <strong>مكان صورة قبل وبعد</strong>
+            ضعي صورة النتائج داخل نفس الفولدر باسم<br>
+            <b>clarity-before-after.jpg</b>
+          </div>
+          <div class="ba-labels">
+            <span>قبل الجلسة</span>
+            <span>بعد الجلسة</span>
+          </div>
+        </div>
+        <div class="ba-caption">
+          نتائج الليزر تختلف من شخص لآخر حسب نوع الشعر والبشرة وعدد الجلسات، ويتم تحديد الخطة المناسبة بعد الاستشارة.
+        </div>
+      </div>
+
+      <div class="social-card rv d2">
+        <div class="social-title">تابعينا على السوشيال ميديا</div>
+        <div class="social-desc">لمشاهدة العروض اليومية، النتائج، التعليمات، وآخر أخبار مركز فاملي للتجميل والليزر.</div>
+
+        <div class="social-links">
+          <a class="social-link sl-inst" href="https://www.instagram.com/fam1iy_cosmetic_dentistry?igsh=MXIyeHdlbm1kZ3gzdw==/" target="_blank" rel="noopener">
+            <div class="sl-main">
+              <div class="sl-ico">⌾</div>
+              <div>
+                <div class="sl-t">Instagram</div>
+                <div class="sl-s">ضعي رابط حساب الإنستغرام هنا</div>
+              </div>
+            </div>
+            <span>فتح ←</span>
+          </a>
+
+          <a class="social-link sl-face" href="https://www.facebook.com/share/1E2gy5g5qQ/?mibextid=wwXIfr/" target="_blank" rel="noopener">
+            <div class="sl-main">
+              <div class="sl-ico">f</div>
+              <div>
+                <div class="sl-t">Facebook</div>
+                <div class="sl-s">ضعي رابط صفحة الفيسبوك هنا</div>
+              </div>
+            </div>
+            <span>فتح ←</span>
+          </a>
+
+          <a class="social-link sl-wa" href="https://wa.me/9647740317888?text=مرحبا مركز فاملي، أريد حجز موعد" target="_blank" rel="noopener">
+            <div class="sl-main">
+              <div class="sl-ico">☏</div>
+              <div>
+                <div class="sl-t">WhatsApp</div>
+                <div class="sl-s">07740317888</div>
+              </div>
+            </div>
+            <span>حجز ←</span>
+          </a>
+        </div>
+
+        <div class="social-hint">
+          لتغيير روابط فيسبوك وإنستغرام ابحثي داخل الكود عن:
+          <b>https://www.instagram.com/</b> و <b>https://www.facebook.com/</b>
+          واستبدليها بروابط المركز.
         </div>
       </div>
     </div>
